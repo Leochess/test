@@ -1,0 +1,207 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box; /* 添加盒模型 */
+}
+
+body {
+	/* 设置背景图像，确保图像在页面中居中且固定不动 */
+	background: url('/static/img/background.jpg') no-repeat center fixed;
+	background-size: cover;
+	font: 20px 'Courier New', Courier, monospace;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: auto;
+}
+
+nav{
+	background: linear-gradient(to right,#c3d8f2,#ffc573);
+	height: 50px;
+	width: 100%;
+	position: relative;
+}
+
+ul {
+	margin: 0;
+	padding: 0; /* 修正拼写错误 */
+	list-style: none;
+	display: flex; /* 使用flex以优化布局 */
+	justify-content: flex-end; /* 右对齐 */
+}
+
+li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	display: block;
+	padding: 14px 20px;
+	text-decoration: none;
+	color: black;
+}
+
+.login-box, .register-box {
+	width: 50%;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
+}
+
+.login-row, .register-row, .sex-row, .hobby-row {
+	display: flex;
+	align-items: center;
+	margin: 10px;
+}
+
+input[type=radio] {
+	margin-right: 10px;
+	border: 1px solid #ccc;
+}
+
+label {
+	width: 300px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+input[type=text], input[type=password] {
+	width: 50%;
+	margin: 10px auto;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+button {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	margin: 10px auto;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 80px;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+select {
+	width: 100px;
+	padding: 5px;
+	font-size: 15px;
+	border: 1px solid #ccc;
+}
+
+.swiper {
+	width: 800px;
+	height: 350px;
+}
+
+img {
+	width: 800px;
+	height: 350px;
+}
+
+.grid-container {
+	margin: 0 auto;
+	width: 90%;
+	height: 1000px;
+	border: 1px solid;
+	background-color: rgba(255,255,255,0.4);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 30px;
+}
+
+.grid-title, .grid-content {
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-title img {
+	width: 350px;
+	height: 300px;
+}
+
+.grid-content a {
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.grid-content a:hover {
+	color: red;
+}
+
+.grid-content p {
+	font-size: 16px;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+
+.grid-item {
+	border: 1px solid;
+	background-color: #dcd4c4;
+}
+
+.grid-item:nth-child(1) {
+	grid-row: 1 / 3;
+	grid-column: 1 / 2;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.grid-item:nth-child(2) {
+	grid-row: 3 / 4;
+	grid-column: 1 / 3;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.grid-item:nth-child(3) {
+	grid-row: 1 / 2;
+	grid-column: 3 / 5;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.grid-item:nth-child(4) {
+	grid-row: 2 / 4;
+	grid-column: 3 / 4;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.tab {
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	width: 100%;
+}
+
+.tab a {
+	color: black;
+	text-decoration: none;
+	padding: 14px 20px;
+	text-align: center;
+	background-color: beige;
+}
+
+.tab a.active {
+	background-color: #dcd4c4;
+	color: #c3d8f2;
+}
+
+.content {
+	display: none; /* 保持此属性用于隐藏内容 */
+	background-color: honeydew;
+	width: 80%;
+	height: 500px;
+}
+
+/* 提醒：需确保所有样式兼容不同分辨率以提高适用性 */

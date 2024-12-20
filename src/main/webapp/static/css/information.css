@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("/static/img/background2.jpg") no-repeat;
+    background-size: cover;  
+}
+.flex-container{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height:600px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    border-right:1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    /*backdrop-filter:为一个元素后面区域添加图形效果（如模糊或颜色偏移）*/
+    background: rgba(50, 50, 50, 0.2);
+}
+.flex-container .inputbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 5px;
+}
+
+/*  > 为选择器  */
+.flex-container .inputbox > label{
+    margin-bottom: 5px;
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+}
+
+.flex-container > h2{
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+}
+
+.flex-container .inputbox > input{
+    box-sizing: border-box;
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+    height: 35px;
+    width:250px;
+    background: rgba(255,255,255,0.3);
+    border:1px solid rgba(255,255,255,0.5);
+    border-radius:5px;
+    transition: 0.2s;
+    outline: none;
+    padding:0 10px;
+}
+
+/* focus选择器接受键盘事件或其他用户输入的元素 */
+.flex-container .inputbox > input:focus{
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+.flex-container .forgetbox{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.flex-container .forgetbox{
+    margin-top: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.flex-container .forgetbox > a{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    transition: 0.2s;
+    width: 250px;
+    text-align: end;
+}
+
+/*hover选择器用于鼠标移到链接上的样式*/
+.flex-container .forgetbox > a:hover{
+    color: rgba(255,255,255,1);
+}
+
+.flex-container .forgetbox > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    
+}
+.button-box{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.button-box > div > input{
+    width: 120px;
+    height: 35px;
+    border: 1px solid rgba(0,42,77, 0.8);
+    background: rgba(0,42,77, 0.6);
+    margin-right: 10px;
+    color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+
+.button-box > div > input:hover{
+    border: 1px solid rgba(0,110,121, 0.8);
+    background: rgba(0,110,121, 0.6);
+} 
+a{
+    height: 100%;
+    width: 100%;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+h1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6)
+}
+h3{
+    font-size: 60px;
+    color: rgba(255,255,255,0.6)
+}
+h4{
+    font-size: 50px;
+    color: rgba(255,255,255,0.6)
+}

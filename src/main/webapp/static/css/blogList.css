@@ -1,0 +1,44 @@
+.blog {
+    width: 100%;
+    padding: 30px 20px;
+}
+
+/* 博客的标题 */
+.blog .title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+/* 博客的日期 */
+.blog .date {
+    text-align: center;
+    padding-bottom: 10px;
+    color: rgb(100, 100, 100);
+}
+
+/* 博客的描述 */
+.blog .desc {
+    text-indent: 2em;
+}
+
+/* 查看博客详情的按钮 */
+.blog .detail {
+    display: block;
+    width: 120px;
+    color: grey;
+    height: 30px;
+    border: 2px solid grey;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    margin: 10px auto;
+    transition: all 1s;
+}
+
+.blog .detail:hover {
+    background-color: grey;
+    color: white;
+}

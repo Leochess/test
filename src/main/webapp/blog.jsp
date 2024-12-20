@@ -4,20 +4,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>博客列表页</title>
-        <link rel="stylesheet" href="/static/css/blogStyle.css">
-        <link rel="stylesheet" href="/static/css/blogList.css">
+        <link rel="stylesheet" href="static/css/blogStyle.css">
+        <link rel="stylesheet" href="static/css/blogList.css">
     </head>
     <body>
         <!-- 导航栏 -->
         <div class="nav">
-            <img src="/static/img/logo.png">
+            <img src="static/img/logo.png">
             <span class="title">我的博客系统</span>
              <!-- 使用 span 把左右两侧的元素给撑开 -->
              <span class="spacer"></span>
-            <a href="search.html">查询</a>
-            <a href="writeBlog.html">写博客</a>
-            <a href="changePassword.html">改密码</a>
-            <a href="deleteAccount.html">注销</a>
+            <a href="search.jsp">查询</a>
+            <a href="writeBlog.jsp">写博客</a>
+            <a href="changePassword.jsp">改密码</a>
+            <a href="deleteAccount.jsp">注销</a>
         </div>
         <!-- 版心 -->
         <div class="container">
@@ -26,7 +26,7 @@
                 <!-- 用户详情 -->
                 <div class="card">
                     <!-- 用户的头像 -->
-                    <img src="/static/img/person.png">
+                    <img src="static/img/person.png">
                     <!-- 用户名 -->
                     <h3>XXXXXXX</h3>
                     <!-- 其它信息 -->

@@ -7,7 +7,7 @@
 	<body>
 		<div class="register-box">
 			<h2>请注册</h2>
-			<form action="/registerServlet">
+			<form action="${pageContext.request.contextPath}/registerServlet">
 				<div class="register-row"> <label for="username">用户名：</label>
 					<input type="text" placeholder="请输入用户名" id="username" required>
 				</div>
@@ -65,4 +65,3 @@
 			</script>
 		</div>
 	</body>
-</html>

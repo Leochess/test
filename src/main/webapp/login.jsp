@@ -50,6 +50,4 @@
 		});
 	</script>
 </div>
-
 </body>
-</html>

@@ -14,4 +14,3 @@
         <!--使用了animate.css添加了动画效果-->
     </div>
 </body>
-</html>

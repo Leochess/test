@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>查询用户</title>
-    <link rel="stylesheet" href="/static/css/information.css">
+    <link rel="stylesheet" href="static/css/information.css">
     <script>
         function  back(){
             window.location.href="index.html";
@@ -11,7 +11,7 @@
     </script>
 </head>
 <body>
-    <form action="searchServlet">
+    <form action="${pageContext.request.contextPath}/searchServlet">
         <div class="flex-container">
             <h2>查询用户</h2>
             <div class="inputbox">
@@ -30,4 +30,3 @@
         </div>
     </form>
 </body>
-</html>

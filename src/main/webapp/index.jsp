@@ -3,14 +3,13 @@
 		<meta charset="utf-8" />
 		<title>welcome</title>
 		<link rel="stylesheet" href="static/css/style.css"/>
-
 	</head>
 	<body>
 		<nav>
 			<ul>
-				<li><a href="blog.html">主页</a></li>
-				<li><a href="changePassword.html">修改密码</a></li>
-				<li><a href="deleteAccount.html">注销账号</a></li>
+				<li><a href="blog.jsp">主页</a></li>
+				<li><a href="changePassword.jsp">修改密码</a></li>
+				<li><a href="deleteAccount.jsp">注销账号</a></li>
 			</ul>
 		</nav>
 		<div class="grid-container">
@@ -92,4 +91,3 @@
 		</div>
 		<!-- 填充了一些博文，图片等，还有个跳转kfc官网的，帮助你每天都过疯狂星期四（狗头）！ -->
 	</body>
-</html>

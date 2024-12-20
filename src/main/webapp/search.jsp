@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注销账号</title>
+    <title>查询用户</title>
     <link rel="stylesheet" href="/static/css/information.css">
     <script>
         function  back(){
@@ -11,10 +11,14 @@
     </script>
 </head>
 <body>
-    <form action="deleteAccountDo.jsp">
+    <form action="searchServlet">
         <div class="flex-container">
-            <h3>确认要注销账号吗？</h3>
-            <h4>（此操作不可撤销！）</h4>
+            <h2>查询用户</h2>
+            <div class="inputbox">
+                <label>请输入你要查询的用户名</label>
+                <input type="text" name="account" placeholder="请输入用户名">
+            </div>
+           
             <div class="button-box">
                 <div>
                     <input type="submit" value="确认">
@@ -26,3 +30,4 @@
         </div>
     </form>
 </body>
+</html>

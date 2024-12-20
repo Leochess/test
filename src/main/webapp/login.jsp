@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html;charset=utf-8" pageEncoding="utf-8"%>
 <head>
 	<meta charset="utf-8">
 	<title>login</title>
@@ -7,14 +7,14 @@
 <body>
 <div class="login-box">
 	<h2>请登录</h2>
-	<form id="loginForm" action="<%= request.getContextPath() %>/loginServlet" method="post">
+	<form id="loginForm" action="loginServlet">
 		<div class="login-row">
 			<label for="username">用户名：</label>
-			<input type="text" placeholder="请输入用户名" id="username" name="username" required>
+			<input type="text" placeholder="请输入用户名" id="username" required>
 		</div>
 		<div class="login-row">
 			<label for="password">密码：</label>
-			<input type="password" placeholder="请输入密码" id="password" name="password" required>
+			<input type="password" placeholder="请输入密码" id="password" required>
 		</div>
 		<button id="loginButton" type="button">登录</button>
 		<button id="registerButton" type="button">注册</button>
@@ -33,7 +33,7 @@
 				// 有效性检查
 				if (username && password) {
 					// 登录成功后跳转页面
-					window.location.href = "loginAnime.jsp";
+					window.location.href = "index.html";
 				} else {
 					throw new Error("请输入用户名和密码！");
 				}
@@ -46,7 +46,7 @@
 		// 注册按钮的点击事件处理
 		registerButton.addEventListener("click", function() {
 			// 跳转到注册页面
-			// window.location.href = "register.jsp";
+			window.location.href = "register.html";
 		});
 	</script>
 </div>

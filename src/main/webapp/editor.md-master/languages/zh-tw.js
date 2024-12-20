@@ -41,7 +41,7 @@
                 clear            : "清空",
                 search           : "搜尋",
                 help             : "使用幫助",
-                info             : "關於" + exports.title
+                info             : "關於" + (exports.title || "編輯器")
             },
             buttons : {
                 enter  : "確定",
@@ -49,81 +49,56 @@
                 close  : "關閉"
             },
             dialog : {
-                link   : {
-                    title    : "添加鏈接",
-                    url      : "鏈接地址",
-                    urlTitle : "鏈接標題",
-                    urlEmpty : "錯誤：請填寫鏈接地址。"
-                },
-                referenceLink : {
-                    title    : "添加引用鏈接",
-                    name     : "引用名稱",
-                    url      : "鏈接地址",
-                    urlId    : "鏈接ID",
-                    urlTitle : "鏈接標題",
-                    nameEmpty: "錯誤：引用鏈接的名稱不能為空。",
-                    idEmpty  : "錯誤：請填寫引用鏈接的ID。",
-                    urlEmpty : "錯誤：請填寫引用鏈接的URL地址。"
-                },
-                image  : {
-                    title    : "添加圖片",
-                    url      : "圖片地址",
-                    link     : "圖片鏈接",
-                    alt      : "圖片描述",
-                    uploadButton     : "本地上傳",
-                    imageURLEmpty    : "錯誤：圖片地址不能為空。",
-                    uploadFileEmpty  : "錯誤：上傳的圖片不能為空！",
-                    formatNotAllowed : "錯誤：只允許上傳圖片文件，允許上傳的圖片文件格式有："
-                },
-                preformattedText : {
-                    title             : "添加預格式文本或代碼塊", 
-                    emptyAlert        : "錯誤：請填寫預格式文本或代碼的內容。",
-                    placeholder       : "coding now...."
-                },
-                codeBlock : {
-                    title             : "添加代碼塊",                 
-                    selectLabel       : "代碼語言：",
-                    selectDefaultText : "請語言代碼語言",
-                    otherLanguage     : "其他語言",
-                    unselectedLanguageAlert : "錯誤：請選擇代碼所屬的語言類型。",
-                    codeEmptyAlert    : "錯誤：請填寫代碼內容。",
-                    placeholder:      : "coding now...."
-                },
-                htmlEntities : {
-                    title : "HTML實體字符"
-                },
-                help : {
-                    title : "使用幫助"
-                }
+                link: createDialog("添加鏈接", ["鏈接地址", "鏈接標題"], ["錯誤：請填寫鏈接地址。"]),
+                referenceLink: createDialog("添加引用鏈接", ["引用名稱", "鏈接地址", "鏈接ID", "鏈接標題"], [
+                    "錯誤：引用鏈接的名稱不能為空。",
+                    "錯誤：請填寫引用鏈接的ID。",
+                    "錯誤：請填寫引用鏈接的URL地址。"
+                ]),
+                image: createDialog("添加圖片", ["圖片地址", "圖片鏈接", "圖片描述"], [
+                    "錯誤：圖片地址不能為空。",
+                    "錯誤：上傳的圖片不能為空！",
+                    "錯誤：只允許上傳圖片文件，允許上傳的圖片文件格式有："
+                ]),
+                preformattedText: createDialog("添加預格式文本或代碼塊", ["內容"], ["錯誤：請填寫預格式文本或代碼的內容。"]),
+                codeBlock: createDialog("添加代碼塊", ["代碼語言", "其他語言", "代碼內容"], [
+                    "錯誤：請選擇代碼所屬的語言類型。",
+                    "錯誤：請填寫代碼內容。"
+                ]),
+                htmlEntities: { title: "HTML實體字符" },
+                help: { title: "使用幫助" }
             }
         };
-        
+
+        function createDialog(title, fields, errors) {
+            let dialog = { title: title };
+            fields.forEach((field, index) => {
+                dialog[field] = field;
+                if (errors[index]) {
+                    dialog[field + "Empty"] = errors[index];
+                }
+            });
+            return dialog;
+        }
+
         exports.defaults.lang = lang;
     };
-    
-	// CommonJS/Node.js
-	if (typeof require === "function" && typeof exports === "object" && typeof module === "object")
-    { 
-        module.exports = factory;
-    }
-	else if (typeof define === "function")  // AMD/CMD/Sea.js
-    {
-		if (define.amd) { // for Require.js
 
-			define(["editormd"], function(editormd) {
+    // CommonJS/Node.js
+    if (typeof require === "function" && typeof exports === "object" && typeof module === "object") {
+        module.exports = factory;
+    } else if (typeof define === "function") { // AMD/CMD/Sea.js
+        if (define.amd) { // for Require.js
+            define(["editormd"], function(editormd) {
                 factory(editormd);
             });
-
-		} else { // for Sea.js
-			define(function(require) {
+        } else { // for Sea.js
+            define(function(require) {
                 var editormd = require("../editormd");
                 factory(editormd);
             });
-		}
-	} 
-	else
-	{
+        }
+    } else {
         factory(window.editormd);
-	}
-    
+    }
 })();

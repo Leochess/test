@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="static/css/information.css">
     <script>
         function  back(){
-            window.location.href="index.jsp";
+            window.location.href="index.html";
     }
     </script>
 </head>
